@@ -1,11 +1,12 @@
 bool searchMatrix(vector<vector<int>>& matrix, int target) {
-  int row = 0;
-  int col = matrix[0].size()-1;
-  while(col!=-1 && row != matrix.size()){
-      if(matrix[row][col]==target) return true;
-      else if(matrix[row][col]>target) col--;
-      else row++;
-  }
-  return false;
+    int row = 0;
+    int col = matrix[0].size()-1;
+    while(col!=-1 && row != matrix.size()){
+        if(matrix[row][col]==target) return true;
+        else if(matrix[row][col]>target) col--;
+        else row++;
+    }
+    return false;
 }
 //Think of other wo conrners that is matrix[0][matrix[0].size()-1]  at this element the elements beneath are increasing and the elements to the left are decreasing so if the element is bigger we will just increase the row to 2 or if the element is smaller we will decrease the column by 1 and make it matrix[0].size()-2
+//Link: https://leetcode.com/problems/search-a-2d-matrix-ii/description/
