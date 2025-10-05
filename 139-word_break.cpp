@@ -1,22 +1,15 @@
 bool wordBreak(string s, vector<string>& wordDict) {
-    map<string, vector<vector<int>>> mpp;
-    vector<string> dict;
-    for(int i=0;i<wordDict.size();i++){
-        dict.push_back(wordDict[i]);
-    }
-    while(!dict.isempty()){
-        string word = dict.back();
-        vector<vector<int>> arr;
-        int start = 0;
-        for(int i=0;i<s.size();i++){
-            bool iswordstarted = false;
-            if(!iswordstarted && s[i] == word[0]){
-                start = i;
-                iswordstarted = true;
-            }
-            else if(iswordstarted && ){
-                
+    vector<bool> dp(s.size()+1, false);
+    dp[s.size()] = true;
+    for(int i=s.size()-1;i>=0;i--){
+        for(auto j:wordDict){
+            if(i+j.size() <= s.size() && s.substr(i, j.size()) == j){
+                if(dp[i+j.size()]){
+                    dp[i] = true;
+                    break;
+                }
             }
         }
     }
+    return dp[0];
 }
