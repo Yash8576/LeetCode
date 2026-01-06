@@ -47,3 +47,6 @@ int lenOfVDiagonal(vector<vector<int>>& grid){
     }
     return res;
 }
+//At every index find the max len diagonally in all the directions (maxlen) now at some point in one of that maxlen diagonal(len1 until that point)(this is in between 1 to maxlen cause we cannot rotate at first index itself)
+
+//now from this point rotate 90degree Clockwise and see if we there is a digonal in that direction of lenght(lets say len2) noiw the total becomes 1+len1+len2 now try to max this out by comparing all the possible values .
