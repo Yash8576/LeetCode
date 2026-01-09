@@ -15,3 +15,4 @@ vector<string> generateParenthesis(int n) {
     backtrack(ans, "", 0, 0, n);
     return ans;
 }
+
