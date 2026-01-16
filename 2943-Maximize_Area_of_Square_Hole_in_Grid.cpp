@@ -3,7 +3,6 @@ public:
     int maximizeSquareHoleArea(int n, int m, vector<int>& hBars, vector<int>& vBars) {
         sort(hBars.begin(), hBars.end());
         sort(vBars.begin(), vBars.end());
-        
         int maxH = 1;
         if (!hBars.empty()) {
             int current = 1;
@@ -16,7 +15,6 @@ public:
                 }
             }
         }
-        
         int maxV = 1;
         if (!vBars.empty()) {
             int current = 1;
@@ -29,7 +27,6 @@ public:
                 }
             }
         }
-        
         int k = min(maxH, maxV);
         return (k + 1) * (k + 1);
     }
