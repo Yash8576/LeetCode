@@ -12,7 +12,7 @@ public:
         int left = 0;
         int right = min(m, n);
         int result = 0;
-        
+
         while (left <= right) {
             int mid = left + (right - left) / 2;
             bool canFind = false;
